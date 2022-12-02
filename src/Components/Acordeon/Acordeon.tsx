@@ -1,16 +1,30 @@
 import React from "react";
 
-function Acordeon(props: any) {
+
+type AcordionPropsType = {
+    title : string
+    collapsed : boolean
+}
+function Acordion(props: AcordionPropsType) {
+    if (props.collapsed === true)  {return (
+        <div>
+            <AcordionTitle title={props.title}/>
+        </div>
+    );}
+    else
     return (
         <div>
-            <AcordeonTitle title={props.title}/>
-            <AcordeonBody/>
-
+            <AcordionTitle title={props.title}/>
+            <AccordionBody/>
         </div>
     );
 }
 
-function AcordeonTitle(props: any) {
+type AcordionTitlePropsType = {
+    title : string
+}
+
+function AcordionTitle(props: AcordionTitlePropsType) {
     return (
         <>
             <h3>{props.title}</h3>
@@ -18,7 +32,7 @@ function AcordeonTitle(props: any) {
     );
 }
 
-function AcordeonBody() {
+function AccordionBody() {
     return (
         <>
             <ul>
@@ -31,4 +45,4 @@ function AcordeonBody() {
 }
 
 
-export default Acordeon;
+export default Acordion;

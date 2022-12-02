@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Acordeon from "./Components/Acordeon/Acordeon";
+import Acordion from "./Components/Acordeon/Acordeon";
 import Rating from "./Components/Rating/Rating";
 
 function App() {
@@ -8,15 +8,19 @@ function App() {
         <>
             <PageTitle title={"This is app"}/>
             Article1
-            <Rating value={1}/>
-            <Acordeon title={"Acordeon title"}/>
+            <Rating value={3}/>
+            <Acordion title={"Acordion title 1"} collapsed={true}/>
+            <Acordion title={"Acordion title 2"} collapsed={false}/>
             Article2
             <Rating value={4}/>
         </>
     );
 }
 
-function PageTitle(props:any) {
+type PageTitlePropsType = {
+    title : string
+}
+function PageTitle(props:PageTitlePropsType) {
     return (
         <>
             <h1>{props.title}</h1>
