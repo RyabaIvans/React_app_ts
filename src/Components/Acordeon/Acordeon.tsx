@@ -1,6 +1,6 @@
 import React from "react";
 
-function Acordeon(props:any) {
+function Acordeon(props: any) {
     return (
         <div>
             <AcordeonTitle title={props.title}/>
@@ -10,7 +10,7 @@ function Acordeon(props:any) {
     );
 }
 
-function AcordeonTitle(props:any) {
+function AcordeonTitle(props: any) {
     return (
         <>
             <h3>{props.title}</h3>

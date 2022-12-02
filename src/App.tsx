@@ -8,7 +8,7 @@ function App() {
         <>
             <PageTitle title={"This is app"}/>
             Article1
-            <Rating value={3}/>
+            <Rating value={1}/>
             <Acordeon title={"Acordeon title"}/>
             Article2
             <Rating value={4}/>
